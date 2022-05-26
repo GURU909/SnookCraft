@@ -1,0 +1,125 @@
+{
+  "mod_elements": [
+    {
+      "name": "WelcomeToSnookcraft",
+      "type": "achievement",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "welcome_to_snookcraft",
+      "path": "~/Achievements"
+    },
+    {
+      "name": "PlayersDropHeads",
+      "type": "gamerule",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "playersDropHeads",
+      "metadata": {
+        "type": "logic"
+      },
+      "path": "~/GameRules"
+    },
+    {
+      "name": "PlayerTotem",
+      "type": "item",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_totem",
+      "path": "~/Items"
+    },
+    {
+      "name": "DropPlayerHead",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drop_player_head",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "gamerule.playersDropHeads.description": "Players now drop heads on death.",
+      "gamerule.playersDropHeads": "Players Drop Heads",
+      "advancements.welcome_to_snookcraft.descr": "Joined a server running SnookCraft. Welcome!",
+      "item.snookcraft.player_totem": "Player Totem",
+      "advancements.welcome_to_snookcraft.title": "Welcome To SnookCraft!"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Achievements",
+        "children": []
+      },
+      {
+        "name": "GUI",
+        "children": []
+      },
+      {
+        "name": "Items",
+        "children": []
+      },
+      {
+        "name": "GameRules",
+        "children": []
+      },
+      {
+        "name": "Procedures",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "snookcraft",
+    "modName": "SnookCraft",
+    "version": "1.0.0",
+    "author": "edgatto, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.18.2",
+    "modElementsPackage": "net.mcreator.snookcraft",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202200120510
+}

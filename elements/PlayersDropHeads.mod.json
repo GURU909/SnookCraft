@@ -1,0 +1,12 @@
+{
+  "_fv": 28,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Logic",
+    "displayName": "Players Drop Heads",
+    "description": "Players now drop heads on death.",
+    "category": "DROPS",
+    "defaultValueLogic": true,
+    "defaultValueNumber": 0
+  }
+}
