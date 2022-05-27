@@ -3,12 +3,12 @@ package net.mcreator.snookcraft.procedures;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -20,10 +20,10 @@ import javax.annotation.Nullable;
 import java.util.Iterator;
 
 @Mod.EventBusSubscriber
-public class OnEntityPickupItemProcedure {
+public class OnPlayerCraftProcedure {
 	@SubscribeEvent
-	public static void onPickup(EntityItemPickupEvent event) {
-		execute(event, event.getPlayer(), event.getItem().getItem());
+	public static void onItemCrafted(PlayerEvent.ItemCraftedEvent event) {
+		execute(event, event.getPlayer(), event.getCrafting());
 	}
 
 	public static void execute(Entity entity, ItemStack itemstack) {
@@ -34,21 +34,19 @@ public class OnEntityPickupItemProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof Player) {
-			if (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
+			if ((entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
 					? _plr.getAdvancements()
 							.getOrStartProgress(
 									_plr.server.getAdvancements().getAdvancement(new ResourceLocation("snookcraft:welcome_to_snookcraft")))
 							.isDone()
-					: false) {
-				if ((itemstack.getDisplayName().getString()).contains("Music Disc") && itemstack.getRarity() == Rarity.RARE) {
-					if (entity instanceof ServerPlayer _player) {
-						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("snookcraft:a_fine_addition"));
-						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-						if (!_ap.isDone()) {
-							Iterator _iterator = _ap.getRemainingCriteria().iterator();
-							while (_iterator.hasNext())
-								_player.getAdvancements().award(_adv, (String) _iterator.next());
-						}
+					: false) && itemstack.is(ItemTags.create(new ResourceLocation("minecraft:redstone_lamp")))) {
+				if (entity instanceof ServerPlayer _player) {
+					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("snookcraft:basically_edison"));
+					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+					if (!_ap.isDone()) {
+						Iterator _iterator = _ap.getRemainingCriteria().iterator();
+						while (_iterator.hasNext())
+							_player.getAdvancements().award(_adv, (String) _iterator.next());
 					}
 				}
 			}

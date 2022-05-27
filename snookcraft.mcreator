@@ -152,6 +152,27 @@
       "locked_code": false,
       "registry_name": "basically_edison",
       "path": "~/Achievements"
+    },
+    {
+      "name": "OnPlayerCraft",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_player_craft",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [],
@@ -161,7 +182,7 @@
       "gamerule.playersDropHeads.description": "Players now drop heads on death.",
       "advancements.a_fine_addition.descr": "Collect a music disc",
       "gamerule.playersDropHeads": "Players Drop Heads",
-      "advancements.basically_edison.descr": "Craft or Steal a redstone lamp",
+      "advancements.basically_edison.descr": "Craft a redstone lamp",
       "advancements.welcome_to_snookcraft.descr": "Joined a server running SnookCraft. Welcome!",
       "advancements.dead_or_alive.descr": "Claim a player\u0027s head, through any means necessary.",
       "advancements.basically_edison.title": "Basically Edison",
@@ -199,7 +220,7 @@
   "workspaceSettings": {
     "modid": "snookcraft",
     "modName": "SnookCraft",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "edgatto, MCreator",
     "websiteURL": "https://mcreator.net",
     "license": "Academic Free License v3.0",
@@ -210,6 +231,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.18.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.snookcraft",
     "lockBaseModFiles": false
   },

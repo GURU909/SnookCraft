@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "Basically Edison",
-    "achievementDescription": "Craft or Steal a redstone lamp",
+    "achievementDescription": "Craft a redstone lamp",
     "achievementIcon": {
       "value": "Blocks.LIT_REDSTONE_LAMP"
     },
