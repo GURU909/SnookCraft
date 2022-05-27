@@ -1,6 +1,5 @@
 package net.mcreator.snookcraft.procedures;
 
-import net.minecraftforge.server.ServerLifecycleHooks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -13,14 +12,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.ChatType;
 import net.minecraft.client.Minecraft;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
-import net.minecraft.Util;
 
 import javax.annotation.Nullable;
 
@@ -40,12 +35,6 @@ public class OnEntityPickupItemProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		if (!world.isClientSide()) {
-			MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
-			if (_mcserv != null)
-				_mcserv.getPlayerList().broadcastMessage(new TextComponent(("Dev picked up item " + itemstack.getDisplayName().getString())),
-						ChatType.SYSTEM, Util.NIL_UUID);
-		}
 		if (entity instanceof Player) {
 			if (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
 					? _plr.getAdvancements()
@@ -53,7 +42,7 @@ public class OnEntityPickupItemProcedure {
 									_plr.server.getAdvancements().getAdvancement(new ResourceLocation("snookcraft:welcome_to_snookcraft")))
 							.isDone()
 					: false) {
-				if (itemstack.getRarity() == Rarity.UNCOMMON && (itemstack.getDisplayName().getString()).contains("'s Head")) {
+				if ((itemstack.getDisplayName().getString()).contains("'s Head") && itemstack.getRarity() == Rarity.UNCOMMON) {
 					if (entity instanceof ServerPlayer _player) {
 						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("snookcraft:dead_or_alive"));
 						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);

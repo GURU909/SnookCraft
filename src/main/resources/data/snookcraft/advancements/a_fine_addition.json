@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:music_disc_13"
+    },
+    "title": {
+      "translate": "advancements.a_fine_addition.title"
+    },
+    "description": {
+      "translate": "advancements.a_fine_addition.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "a_fine_addition": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "snookcraft:welcome_to_snookcraft"
+}
