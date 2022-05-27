@@ -17,6 +17,8 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.CommandFunction;
 
+import net.mcreator.snookcraft.init.SnookcraftModGameRules;
+
 import javax.annotation.Nullable;
 
 import java.util.Optional;
@@ -38,15 +40,17 @@ public class DropPlayerHeadProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if (sourceentity instanceof Player && entity instanceof Player) {
-			if (world instanceof ServerLevel _level && _level.getServer() != null) {
-				Optional<CommandFunction> _fopt = _level.getServer().getFunctions()
-						.get(new ResourceLocation(((("/give" + sourceentity.getDisplayName().getString()) + ""
-								+ ("player_head{SkullOwner:" + (entity.getDisplayName().getString() + "} 1"))))
-								.toLowerCase(java.util.Locale.ENGLISH)));
-				if (_fopt.isPresent())
-					_level.getServer().getFunctions().execute(_fopt.get(), new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO,
-							_level, 4, "", new TextComponent(""), _level.getServer(), null));
+		if (world.getLevelData().getGameRules().getBoolean(SnookcraftModGameRules.PLAYERSDROPHEADS)) {
+			if (sourceentity instanceof Player && entity instanceof Player) {
+				if (world instanceof ServerLevel _level && _level.getServer() != null) {
+					Optional<CommandFunction> _fopt = _level.getServer().getFunctions()
+							.get(new ResourceLocation(((("/give" + sourceentity.getDisplayName().getString()) + ""
+									+ ("player_head{SkullOwner:" + (entity.getDisplayName().getString() + "} 1"))))
+									.toLowerCase(java.util.Locale.ENGLISH)));
+					if (_fopt.isPresent())
+						_level.getServer().getFunctions().execute(_fopt.get(), new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z),
+								Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null));
+				}
 			}
 		}
 	}
