@@ -9,7 +9,7 @@
     "description": {
       "translate": "advancements.flower_power.descr"
     },
-    "frame": "task",
+    "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false

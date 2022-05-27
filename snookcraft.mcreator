@@ -130,6 +130,10 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -302,43 +306,252 @@
       "locked_code": false,
       "registry_name": "flower_power",
       "path": "~/Achievements"
+    },
+    {
+      "name": "DandelionLogic",
+      "type": "achievement",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dandelion_logic",
+      "path": "~/Achievements/Flower Power Logic"
+    },
+    {
+      "name": "PoppyLogic",
+      "type": "achievement",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poppy_logic",
+      "path": "~/Achievements/Flower Power Logic"
+    },
+    {
+      "name": "BlueOrchidLogic",
+      "type": "achievement",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_orchid_logic",
+      "path": "~/Achievements/Flower Power Logic"
+    },
+    {
+      "name": "AlliumLogic",
+      "type": "achievement",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "allium_logic",
+      "path": "~/Achievements/Flower Power Logic"
+    },
+    {
+      "name": "AzureLogic",
+      "type": "achievement",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "azure_logic",
+      "path": "~/Achievements/Flower Power Logic"
+    },
+    {
+      "name": "RedTulipLogic",
+      "type": "achievement",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_tulip_logic",
+      "path": "~/Achievements/Flower Power Logic"
+    },
+    {
+      "name": "OrangeTulipLogic",
+      "type": "achievement",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orange_tulip_logic",
+      "path": "~/Achievements/Flower Power Logic"
+    },
+    {
+      "name": "WhiteTulipLogic",
+      "type": "achievement",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_tulip_logic",
+      "path": "~/Achievements/Flower Power Logic"
+    },
+    {
+      "name": "PinkTulipLogic",
+      "type": "achievement",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_tulip_logic",
+      "path": "~/Achievements/Flower Power Logic"
+    },
+    {
+      "name": "OxeyeDaisyLogic",
+      "type": "achievement",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oxeye_daisy_logic",
+      "path": "~/Achievements/Flower Power Logic"
+    },
+    {
+      "name": "CornflowerLogic",
+      "type": "achievement",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cornflower_logic",
+      "path": "~/Achievements/Flower Power Logic"
+    },
+    {
+      "name": "LilyOfTheValleyLogic",
+      "type": "achievement",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lily_of_the_valley_logic",
+      "path": "~/Achievements/Flower Power Logic"
+    },
+    {
+      "name": "WitherRoseLogic",
+      "type": "achievement",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wither_rose_logic",
+      "path": "~/Achievements/Flower Power Logic"
+    },
+    {
+      "name": "SunflowerLogic",
+      "type": "achievement",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sunflower_logic",
+      "path": "~/Achievements/Flower Power Logic"
+    },
+    {
+      "name": "LilacLogic",
+      "type": "achievement",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lilac_logic",
+      "path": "~/Achievements/Flower Power Logic"
+    },
+    {
+      "name": "RoseBushLogic",
+      "type": "achievement",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rose_bush_logic",
+      "path": "~/Achievements/Flower Power Logic"
+    },
+    {
+      "name": "PeonyLogic",
+      "type": "achievement",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "peony_logic",
+      "path": "~/Achievements/Flower Power Logic"
+    },
+    {
+      "name": "FlowerPickup",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flower_pickup",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "advancements.ore_galore.title": "Ore Galore",
-      "advancements.coal_advance.descr": "Progress tracker for Ore Galore",
+      "advancements.blue_orchid_logic.descr": "Logic",
+      "advancements.orange_tulip_logic.descr": "Logic",
+      "advancements.dandelion_logic.title": "Dandelion Logic",
+      "advancements.red_tulip_logic.descr": "Logic",
+      "advancements.allium_logic.descr": "Logic",
       "advancements.gold_advance.title": "Gold Advance",
+      "advancements.allium_logic.title": "Allium Logic",
       "advancements.diamond_advance.descr": "Logic",
       "advancements.redstone_advance.title": "Redstone Advance",
       "advancements.diamond_advance.title": "Diamond Advance",
+      "advancements.red_tulip_logic.title": "Red Tulip Logic",
+      "advancements.cornflower_logic.descr": "Logic",
+      "advancements.azure_logic.title": "Azure Logic",
+      "gamerule.playersDropHeads": "Players Drop Heads",
+      "advancements.orange_tulip_logic.title": "Orange Tulip Logic",
+      "advancements.dead_or_alive.descr": "Claim a player\u0027s head, through any means necessary.",
+      "advancements.iron_advance.title": "Iron Advance",
+      "advancements.iron_advance.descr": "Logic",
+      "advancements.cornflower_logic.title": "Cornflower Logic",
+      "advancements.lilac_logic.descr": "Logic",
+      "advancements.basically_edison.title": "Basically Edison",
+      "advancements.emerald_advance.title": "Emerald Advance",
+      "advancements.azure_logic.descr": "Logic",
+      "advancements.coal_advance.title": "Coal Advance",
+      "advancements.gold_advance.descr": "Logic",
+      "advancements.a_fine_addition.descr": "Collect a music disc",
+      "advancements.oxeye_daisy_logic.title": "Oxeye Daisy Logic",
+      "advancements.blue_orchid_logic.title": "Blue Orchid Logic",
+      "advancements.welcome_to_snookcraft.title": "Welcome To SnookCraft!",
+      "advancements.pink_tulip_logic.descr": "Logic",
+      "advancements.lily_of_the_valley_logic.title": "Lily Of The Valley Logic",
+      "advancements.rose_bush_logic.title": "Rose Bush Logic",
+      "advancements.white_tulip_logic.title": "White Tulip Logic",
+      "advancements.poppy_logic.descr": "Logic",
+      "advancements.ore_galore.title": "Ore Galore",
+      "advancements.coal_advance.descr": "Progress tracker for Ore Galore",
+      "advancements.wither_rose_logic.title": "Wither Rose Logic",
+      "advancements.sunflower_logic.descr": "Logic",
+      "advancements.lilac_logic.title": "Lilac Logic",
+      "advancements.sunflower_logic.title": "Sunflower Logic",
       "gamerule.playersDropHeads.description": "Players now drop heads on death.",
       "advancements.flower_power.descr": "Collect all types of flowers",
       "advancements.lapis_advance.descr": "Logic",
-      "gamerule.playersDropHeads": "Players Drop Heads",
       "advancements.ore_galore.descr": "Mine all types of standard ore",
-      "advancements.dead_or_alive.descr": "Claim a player\u0027s head, through any means necessary.",
       "advancements.copper_advance.title": "Copper Advance",
+      "advancements.peony_logic.title": "Peony Logic",
       "item.snookcraft.player_totem": "Player Totem",
-      "advancements.iron_advance.title": "Iron Advance",
-      "advancements.iron_advance.descr": "Logic",
+      "advancements.peony_logic.descr": "Logic",
+      "advancements.poppy_logic.title": "Poppy Logic",
       "advancements.copper_advance.descr": "Logic",
+      "advancements.white_tulip_logic.descr": "Logic",
       "advancements.lapis_advance.title": "Lapis Advance",
       "advancements.basically_edison.descr": "Craft a redstone lamp",
       "advancements.emerald_advance.descr": "Logic",
       "advancements.flower_power.title": "Flower Power",
-      "advancements.basically_edison.title": "Basically Edison",
+      "advancements.oxeye_daisy_logic.descr": "Logic",
       "advancements.redstone_advance.descr": "Logic",
-      "advancements.emerald_advance.title": "Emerald Advance",
+      "advancements.wither_rose_logic.descr": "Logic",
       "advancements.dead_or_alive.title": "Dead Or Alive",
-      "advancements.coal_advance.title": "Coal Advance",
-      "advancements.gold_advance.descr": "Logic",
-      "advancements.a_fine_addition.descr": "Collect a music disc",
       "advancements.welcome_to_snookcraft.descr": "Joined a server running SnookCraft. Welcome!",
-      "advancements.welcome_to_snookcraft.title": "Welcome To SnookCraft!",
-      "advancements.a_fine_addition.title": "A Fine Addition"
+      "advancements.rose_bush_logic.descr": "Logic",
+      "advancements.lily_of_the_valley_logic.descr": "Logic",
+      "advancements.a_fine_addition.title": "A Fine Addition",
+      "advancements.pink_tulip_logic.title": "Pink Tulip Logic",
+      "advancements.dandelion_logic.descr": "Logic"
     }
   },
   "foldersRoot": {
@@ -349,6 +562,10 @@
         "children": [
           {
             "name": "Ore Galore Logic",
+            "children": []
+          },
+          {
+            "name": "Flower Power Logic",
             "children": []
           }
         ]

@@ -1,0 +1,8 @@
+{
+  "criteria": {
+    "lily_of_the_valley_logic": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "snookcraft:flower_power"
+}

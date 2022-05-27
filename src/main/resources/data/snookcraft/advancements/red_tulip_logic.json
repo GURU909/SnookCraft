@@ -1,0 +1,8 @@
+{
+  "criteria": {
+    "red_tulip_logic": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "snookcraft:flower_power"
+}

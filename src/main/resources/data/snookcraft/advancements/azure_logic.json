@@ -1,0 +1,8 @@
+{
+  "criteria": {
+    "azure_logic": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "snookcraft:flower_power"
+}

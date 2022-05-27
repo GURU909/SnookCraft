@@ -1,0 +1,8 @@
+{
+  "criteria": {
+    "allium_logic": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "snookcraft:flower_power"
+}

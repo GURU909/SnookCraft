@@ -1,0 +1,8 @@
+{
+  "criteria": {
+    "rose_bush_logic": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "snookcraft:flower_power"
+}
