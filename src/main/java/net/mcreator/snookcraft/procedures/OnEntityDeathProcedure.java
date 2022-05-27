@@ -10,18 +10,22 @@ import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.CommandFunction;
+import net.minecraft.advancements.AdvancementProgress;
+import net.minecraft.advancements.Advancement;
 
 import net.mcreator.snookcraft.init.SnookcraftModGameRules;
 
 import javax.annotation.Nullable;
 
 import java.util.Optional;
+import java.util.Iterator;
 
 @Mod.EventBusSubscriber
 public class OnEntityDeathProcedure {
@@ -50,6 +54,21 @@ public class OnEntityDeathProcedure {
 					if (_fopt.isPresent())
 						_level.getServer().getFunctions().execute(_fopt.get(), new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z),
 								Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null));
+				}
+				if (!(entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
+						? _plr.getAdvancements()
+								.getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("snookcraft:dead_or_alive")))
+								.isDone()
+						: false)) {
+					if (entity instanceof ServerPlayer _player) {
+						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("snookcraft:dead_or_alive"));
+						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+						if (!_ap.isDone()) {
+							Iterator _iterator = _ap.getRemainingCriteria().iterator();
+							while (_iterator.hasNext())
+								_player.getAdvancements().award(_adv, (String) _iterator.next());
+						}
+					}
 				}
 			}
 		}

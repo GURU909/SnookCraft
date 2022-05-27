@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:redstone_lamp"
+    },
+    "title": {
+      "translate": "advancements.basically_edison.title"
+    },
+    "description": {
+      "translate": "advancements.basically_edison.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "basically_edison": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "snookcraft:welcome_to_snookcraft"
+}
