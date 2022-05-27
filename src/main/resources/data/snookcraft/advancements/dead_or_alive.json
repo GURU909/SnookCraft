@@ -16,20 +16,7 @@
   },
   "criteria": {
     "dead_or_alive": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:zombie_head"
-            ],
-            "count": {
-              "min": 1,
-              "max": 1
-            }
-          }
-        ]
-      }
+      "trigger": "minecraft:impossible"
     }
   },
   "parent": "snookcraft:welcome_to_snookcraft"

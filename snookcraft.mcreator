@@ -113,6 +113,31 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "OnEntityPickupItem",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_entity_pickup_item",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [],
