@@ -66,6 +66,27 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "OnCommand",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_command",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "command",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [],
