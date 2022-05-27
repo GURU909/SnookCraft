@@ -96,6 +96,23 @@
       "locked_code": false,
       "registry_name": "dead_or_alive",
       "path": "~/Achievements"
+    },
+    {
+      "name": "OnPlayerJoin",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_player_join",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [],

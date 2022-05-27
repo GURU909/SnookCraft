@@ -17,10 +17,7 @@
   },
   "criteria": {
     "welcome_to_snookcraft": {
-      "trigger": "minecraft:changed_dimension",
-      "conditions": {
-        "to": "minecraft:overworld"
-      }
+      "trigger": "minecraft:impossible"
     }
   }
 }
