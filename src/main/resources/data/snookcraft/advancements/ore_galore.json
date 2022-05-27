@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:diamond_pickaxe"
+    },
+    "title": {
+      "translate": "advancements.ore_galore.title"
+    },
+    "description": {
+      "translate": "advancements.ore_galore.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "ore_galore": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "snookcraft:welcome_to_snookcraft"
+}

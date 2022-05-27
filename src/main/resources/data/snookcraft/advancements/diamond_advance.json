@@ -1,0 +1,8 @@
+{
+  "criteria": {
+    "diamond_advance": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "snookcraft:ore_galore"
+}

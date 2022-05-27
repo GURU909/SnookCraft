@@ -1,0 +1,8 @@
+{
+  "criteria": {
+    "coal_advance": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "snookcraft:ore_galore"
+}
