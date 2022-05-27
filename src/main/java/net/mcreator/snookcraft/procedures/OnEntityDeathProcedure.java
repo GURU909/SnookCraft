@@ -24,7 +24,7 @@ import javax.annotation.Nullable;
 import java.util.Optional;
 
 @Mod.EventBusSubscriber
-public class DropPlayerHeadProcedure {
+public class OnEntityDeathProcedure {
 	@SubscribeEvent
 	public static void onEntityDeath(LivingDeathEvent event) {
 		if (event != null && event.getEntity() != null) {

@@ -31,12 +31,12 @@
       "path": "~/Items"
     },
     {
-      "name": "DropPlayerHead",
+      "name": "OnEntityDeath",
       "type": "procedure",
       "sortid": 4,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "drop_player_head",
+      "registry_name": "on_entity_death",
       "metadata": {
         "dependencies": [
           {
