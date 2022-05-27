@@ -7,10 +7,10 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.MinecraftServer;
@@ -53,7 +53,7 @@ public class OnEntityPickupItemProcedure {
 									_plr.server.getAdvancements().getAdvancement(new ResourceLocation("snookcraft:welcome_to_snookcraft")))
 							.isDone()
 					: false) {
-				if (itemstack.is(ItemTags.create(new ResourceLocation("minecraft:player_head")))) {
+				if (itemstack.getRarity() == Rarity.UNCOMMON && (itemstack.getDisplayName().getString()).contains("'s Head")) {
 					if (entity instanceof ServerPlayer _player) {
 						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("snookcraft:dead_or_alive"));
 						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
