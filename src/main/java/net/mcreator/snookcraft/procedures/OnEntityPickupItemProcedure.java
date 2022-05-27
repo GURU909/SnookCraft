@@ -57,5 +57,25 @@ public class OnEntityPickupItemProcedure {
 				}
 			}
 		}
+		if (entity instanceof Player) {
+			if (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
+					? _plr.getAdvancements()
+							.getOrStartProgress(
+									_plr.server.getAdvancements().getAdvancement(new ResourceLocation("snookcraft:welcome_to_snookcraft")))
+							.isDone()
+					: false) {
+				if ((itemstack.getDisplayName().getString()).contains("Music Disc") && itemstack.getRarity() == Rarity.RARE) {
+					if (entity instanceof ServerPlayer _player) {
+						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("snookcraft:a_fine_addition"));
+						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+						if (!_ap.isDone()) {
+							Iterator _iterator = _ap.getRemainingCriteria().iterator();
+							while (_iterator.hasNext())
+								_player.getAdvancements().award(_adv, (String) _iterator.next());
+						}
+					}
+				}
+			}
+		}
 	}
 }
