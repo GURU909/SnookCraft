@@ -4,7 +4,7 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="snookcraft"
-version="1.0.2"
+version="1.0.3"
 displayName="SnookCraft"
 credits="Written and Compiled in MCreator"
 displayURL="https://discord.gg/e7F884P3AE"
@@ -21,6 +21,12 @@ SnookCraft! A custom mod made for use on TheSnookums' MC Server.
     ordering="NONE"
     side="BOTH"
 
+[[dependencies.snookcraft]]
+    modId="forge"
+    mandatory=true
+    versionRange="[40.1.0]"
+    ordering="NONE"
+    side="BOTH"
 
 
 

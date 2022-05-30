@@ -605,8 +605,8 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "advancements.blue_orchid_logic.descr": "Logic",
       "advancements.orange_tulip_logic.descr": "Logic",
+      "advancements.blue_orchid_logic.descr": "Logic",
       "advancements.dandelion_logic.title": "Dandelion Logic",
       "advancements.red_tulip_logic.descr": "Logic",
       "advancements.allium_logic.descr": "Logic",
@@ -716,13 +716,13 @@
   "workspaceSettings": {
     "modid": "snookcraft",
     "modName": "SnookCraft",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "SnookCraft! A custom mod made for use on TheSnookums\u0027 MC Server.",
     "author": "DaGooRoo",
     "websiteURL": "https://discord.gg/e7F884P3AE",
     "license": "All Rights Reserved",
-    "disableForgeVersionCheck": true,
-    "serverSideOnly": false,
+    "disableForgeVersionCheck": false,
+    "serverSideOnly": true,
     "modPicture": "snookums_pfp",
     "requiredMods": [],
     "dependencies": [],
