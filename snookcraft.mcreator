@@ -22,15 +22,6 @@
       "path": "~/GameRules"
     },
     {
-      "name": "PlayerTotem",
-      "type": "item",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "player_totem",
-      "path": "~/Items"
-    },
-    {
       "name": "OnEntityDeath",
       "type": "procedure",
       "sortid": 4,
@@ -533,7 +524,6 @@
       "advancements.ore_galore.descr": "Mine all types of standard ore",
       "advancements.copper_advance.title": "Copper Advance",
       "advancements.peony_logic.title": "Peony Logic",
-      "item.snookcraft.player_totem": "Player Totem",
       "advancements.peony_logic.descr": "Logic",
       "advancements.poppy_logic.title": "Poppy Logic",
       "advancements.copper_advance.descr": "Logic",
@@ -591,18 +581,19 @@
   "workspaceSettings": {
     "modid": "snookcraft",
     "modName": "SnookCraft",
-    "version": "1.0.1",
-    "author": "edgatto, MCreator",
+    "version": "1.0.2",
+    "description": "SnookCraft! A custom mod made for use on TheSnookums\u0027 MC Server.",
+    "author": "DaGooRoo",
     "websiteURL": "https://mcreator.net",
-    "license": "Academic Free License v3.0",
+    "license": "All Rights Reserved",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
+    "modPicture": "snookums_pfp",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.18.2",
-    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.snookcraft",
     "lockBaseModFiles": false
   },

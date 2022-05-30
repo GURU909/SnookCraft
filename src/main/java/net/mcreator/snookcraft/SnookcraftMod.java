@@ -26,8 +26,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
-import net.mcreator.snookcraft.init.SnookcraftModItems;
-
 import java.util.function.Supplier;
 import java.util.function.Function;
 import java.util.function.BiConsumer;
@@ -44,8 +42,6 @@ public class SnookcraftMod {
 	public SnookcraftMod() {
 
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-
-		SnookcraftModItems.REGISTRY.register(bus);
 
 	}
 
