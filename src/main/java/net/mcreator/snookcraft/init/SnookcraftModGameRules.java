@@ -12,4 +12,6 @@ import net.minecraft.world.level.GameRules;
 public class SnookcraftModGameRules {
 	public static final GameRules.Key<GameRules.BooleanValue> PLAYERSDROPHEADS = GameRules.register("playersDropHeads", GameRules.Category.DROPS,
 			GameRules.BooleanValue.create(true));
+	public static final GameRules.Key<GameRules.BooleanValue> RESTRICTLAVAUSE = GameRules.register("restrictLavaUse", GameRules.Category.PLAYER,
+			GameRules.BooleanValue.create(true));
 }

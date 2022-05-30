@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:copper_ingot"
+    },
+    "title": {
+      "translate": "advancements.useless.title"
+    },
+    "description": {
+      "translate": "advancements.useless.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "useless": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "snookcraft:welcome_to_snookcraft"
+}

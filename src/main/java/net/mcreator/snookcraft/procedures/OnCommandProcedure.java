@@ -37,5 +37,12 @@ public class OnCommandProcedure {
 			if (world instanceof Level _level)
 				_level.getGameRules().getRule(SnookcraftModGameRules.PLAYERSDROPHEADS).set((false), _level.getServer());
 		}
+		if ((command).equals("gamerule restrictLavaUse true")) {
+			if (world instanceof Level _level)
+				_level.getGameRules().getRule(SnookcraftModGameRules.RESTRICTLAVAUSE).set((true), _level.getServer());
+		} else if ((command).equals("gamerule restrictLavaUse false")) {
+			if (world instanceof Level _level)
+				_level.getGameRules().getRule(SnookcraftModGameRules.RESTRICTLAVAUSE).set((false), _level.getServer());
+		}
 	}
 }

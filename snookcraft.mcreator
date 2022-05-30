@@ -472,14 +472,103 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "Useless",
+      "type": "achievement",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "useless",
+      "path": "~/Achievements"
+    },
+    {
+      "name": "OnPlayerSmelt",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_player_smelt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "ShowPlayerLocationsCommandExecuted",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_player_locations_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "ShowPlayerLocations",
+      "type": "command",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_player_locations",
+      "path": "~/Commands"
+    },
+    {
+      "name": "RestrictLavaUse",
+      "type": "gamerule",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "restrictLavaUse",
+      "metadata": {
+        "type": "logic"
+      },
+      "path": "~/GameRules"
+    },
+    {
+      "name": "OnBlockPlaced",
+      "type": "procedure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_block_placed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "advancements.blue_orchid_logic.descr": "Logic",
       "advancements.orange_tulip_logic.descr": "Logic",
+      "advancements.blue_orchid_logic.descr": "Logic",
       "advancements.dandelion_logic.title": "Dandelion Logic",
       "advancements.red_tulip_logic.descr": "Logic",
       "advancements.allium_logic.descr": "Logic",
@@ -506,6 +595,7 @@
       "advancements.a_fine_addition.descr": "Collect a music disc",
       "advancements.oxeye_daisy_logic.title": "Oxeye Daisy Logic",
       "advancements.blue_orchid_logic.title": "Blue Orchid Logic",
+      "advancements.useless.title": "Useless",
       "advancements.welcome_to_snookcraft.title": "Welcome To SnookCraft!",
       "advancements.pink_tulip_logic.descr": "Logic",
       "advancements.lily_of_the_valley_logic.title": "Lily Of The Valley Logic",
@@ -523,10 +613,12 @@
       "advancements.lapis_advance.descr": "Logic",
       "advancements.ore_galore.descr": "Mine all types of standard ore",
       "advancements.copper_advance.title": "Copper Advance",
+      "gamerule.restrictLavaUse": "Restrict Lava Use",
       "advancements.peony_logic.title": "Peony Logic",
       "advancements.peony_logic.descr": "Logic",
       "advancements.poppy_logic.title": "Poppy Logic",
       "advancements.copper_advance.descr": "Logic",
+      "gamerule.restrictLavaUse.description": "Allow or deny players the ability to place lava.",
       "advancements.white_tulip_logic.descr": "Logic",
       "advancements.lapis_advance.title": "Lapis Advance",
       "advancements.basically_edison.descr": "Craft a redstone lamp",
@@ -534,6 +626,7 @@
       "advancements.flower_power.title": "Flower Power",
       "advancements.oxeye_daisy_logic.descr": "Logic",
       "advancements.redstone_advance.descr": "Logic",
+      "advancements.useless.descr": "Smelt a copper ingot",
       "advancements.wither_rose_logic.descr": "Logic",
       "advancements.dead_or_alive.title": "Dead Or Alive",
       "advancements.welcome_to_snookcraft.descr": "Joined a server running SnookCraft. Welcome!",
@@ -575,6 +668,10 @@
       {
         "name": "Procedures",
         "children": []
+      },
+      {
+        "name": "Commands",
+        "children": []
       }
     ]
   },
@@ -584,7 +681,7 @@
     "version": "1.0.2",
     "description": "SnookCraft! A custom mod made for use on TheSnookums\u0027 MC Server.",
     "author": "DaGooRoo",
-    "websiteURL": "https://mcreator.net",
+    "websiteURL": "https://discord.gg/e7F884P3AE",
     "license": "All Rights Reserved",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
@@ -594,6 +691,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.18.2",
+    "credits": "Written and Compiled in MCreator",
     "modElementsPackage": "net.mcreator.snookcraft",
     "lockBaseModFiles": false
   },
