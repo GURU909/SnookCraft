@@ -121,10 +121,6 @@
           {
             "name": "itemstack",
             "type": "itemstack"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -513,6 +509,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -561,14 +561,63 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "LogChestUsage",
+      "type": "gamerule",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "logChestUsage",
+      "metadata": {
+        "type": "logic"
+      },
+      "path": "~/GameRules"
+    },
+    {
+      "name": "OnPlayerRightClickOnBlock",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_player_right_click_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "advancements.orange_tulip_logic.descr": "Logic",
       "advancements.blue_orchid_logic.descr": "Logic",
+      "advancements.orange_tulip_logic.descr": "Logic",
       "advancements.dandelion_logic.title": "Dandelion Logic",
       "advancements.red_tulip_logic.descr": "Logic",
       "advancements.allium_logic.descr": "Logic",
@@ -615,6 +664,7 @@
       "advancements.copper_advance.title": "Copper Advance",
       "gamerule.restrictLavaUse": "Restrict Lava Use",
       "advancements.peony_logic.title": "Peony Logic",
+      "gamerule.logChestUsage.description": "Enable or disable chest access logging",
       "advancements.peony_logic.descr": "Logic",
       "advancements.poppy_logic.title": "Poppy Logic",
       "advancements.copper_advance.descr": "Logic",
@@ -623,6 +673,7 @@
       "advancements.lapis_advance.title": "Lapis Advance",
       "advancements.basically_edison.descr": "Craft a redstone lamp",
       "advancements.emerald_advance.descr": "Logic",
+      "gamerule.logChestUsage": "Log Chest Usage",
       "advancements.flower_power.title": "Flower Power",
       "advancements.oxeye_daisy_logic.descr": "Logic",
       "advancements.redstone_advance.descr": "Logic",

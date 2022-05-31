@@ -1,12 +1,10 @@
 package net.mcreator.snookcraft.procedures;
 
-import net.minecraftforge.server.ServerLifecycleHooks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -14,13 +12,9 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.ChatType;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
-import net.minecraft.Util;
 
 import javax.annotation.Nullable;
 
@@ -30,22 +24,17 @@ import java.util.Iterator;
 public class OnEntityPickupItemProcedure {
 	@SubscribeEvent
 	public static void onPickup(EntityItemPickupEvent event) {
-		execute(event, event.getPlayer().level, event.getPlayer(), event.getItem().getItem());
+		execute(event, event.getPlayer(), event.getItem().getItem());
 	}
 
-	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
-		execute(null, world, entity, itemstack);
+	public static void execute(Entity entity, ItemStack itemstack) {
+		execute(null, entity, itemstack);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, ItemStack itemstack) {
+	private static void execute(@Nullable Event event, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
 		boolean result = false;
-		if (!world.isClientSide()) {
-			MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
-			if (_mcserv != null)
-				_mcserv.getPlayerList().broadcastMessage(new TextComponent((itemstack.getDisplayName().getString())), ChatType.SYSTEM, Util.NIL_UUID);
-		}
 		if (entity instanceof Player
 				&& (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
 						? _plr.getAdvancements()

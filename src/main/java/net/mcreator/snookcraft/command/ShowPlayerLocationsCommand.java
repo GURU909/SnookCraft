@@ -47,7 +47,7 @@ public class ShowPlayerLocationsCommand {
 			index[0]++;
 		});
 
-		ShowPlayerLocationsCommandExecutedProcedure.execute(world);
+		ShowPlayerLocationsCommandExecutedProcedure.execute(world, entity);
 		return 0;
 	}
 }

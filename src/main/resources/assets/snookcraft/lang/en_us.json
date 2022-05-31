@@ -1,6 +1,6 @@
 {
-  "advancements.orange_tulip_logic.descr": "Logic",
   "advancements.blue_orchid_logic.descr": "Logic",
+  "advancements.orange_tulip_logic.descr": "Logic",
   "advancements.dandelion_logic.title": "Dandelion Logic",
   "advancements.red_tulip_logic.descr": "Logic",
   "advancements.allium_logic.descr": "Logic",
@@ -47,6 +47,7 @@
   "advancements.copper_advance.title": "Copper Advance",
   "gamerule.restrictLavaUse": "Restrict Lava Use",
   "advancements.peony_logic.title": "Peony Logic",
+  "gamerule.logChestUsage.description": "Enable or disable chest access logging",
   "advancements.peony_logic.descr": "Logic",
   "advancements.poppy_logic.title": "Poppy Logic",
   "advancements.copper_advance.descr": "Logic",
@@ -55,6 +56,7 @@
   "advancements.lapis_advance.title": "Lapis Advance",
   "advancements.basically_edison.descr": "Craft a redstone lamp",
   "advancements.emerald_advance.descr": "Logic",
+  "gamerule.logChestUsage": "Log Chest Usage",
   "advancements.flower_power.title": "Flower Power",
   "advancements.oxeye_daisy_logic.descr": "Logic",
   "advancements.redstone_advance.descr": "Logic",

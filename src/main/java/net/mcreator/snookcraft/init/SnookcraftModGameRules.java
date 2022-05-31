@@ -14,4 +14,6 @@ public class SnookcraftModGameRules {
 			GameRules.BooleanValue.create(true));
 	public static final GameRules.Key<GameRules.BooleanValue> RESTRICTLAVAUSE = GameRules.register("restrictLavaUse", GameRules.Category.PLAYER,
 			GameRules.BooleanValue.create(true));
+	public static final GameRules.Key<GameRules.BooleanValue> LOGCHESTUSAGE = GameRules.register("logChestUsage", GameRules.Category.MISC,
+			GameRules.BooleanValue.create(true));
 }

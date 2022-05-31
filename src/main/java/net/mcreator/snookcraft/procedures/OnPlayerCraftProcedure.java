@@ -34,19 +34,25 @@ public class OnPlayerCraftProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof Player) {
-			if ((entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
+			if (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
 					? _plr.getAdvancements()
 							.getOrStartProgress(
 									_plr.server.getAdvancements().getAdvancement(new ResourceLocation("snookcraft:welcome_to_snookcraft")))
 							.isDone()
-					: false) && itemstack.getItem() == Blocks.REDSTONE_LAMP.asItem()) {
-				if (entity instanceof ServerPlayer _player) {
-					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("snookcraft:basically_edison"));
-					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-					if (!_ap.isDone()) {
-						Iterator _iterator = _ap.getRemainingCriteria().iterator();
-						while (_iterator.hasNext())
-							_player.getAdvancements().award(_adv, (String) _iterator.next());
+					: false) {
+				if (!(entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
+						? _plr.getAdvancements()
+								.getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("snookcraft:basically_edison")))
+								.isDone()
+						: false) && itemstack.getItem() == Blocks.REDSTONE_LAMP.asItem()) {
+					if (entity instanceof ServerPlayer _player) {
+						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("snookcraft:basically_edison"));
+						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+						if (!_ap.isDone()) {
+							Iterator _iterator = _ap.getRemainingCriteria().iterator();
+							while (_iterator.hasNext())
+								_player.getAdvancements().award(_adv, (String) _iterator.next());
+						}
 					}
 				}
 			}
