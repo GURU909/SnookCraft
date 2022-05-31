@@ -22,7 +22,7 @@ import net.mcreator.snookcraft.init.SnookcraftModGameRules;
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
-public class OnBlockPlacedProcedure {
+public class OnPlayerRightClickWithItemProcedure {
 	@SubscribeEvent
 	public static void onRightClickItem(PlayerInteractEvent.RightClickItem event) {
 		if (event.getHand() != event.getPlayer().getUsedItemHand())
@@ -46,22 +46,18 @@ public class OnBlockPlacedProcedure {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == Items.LAVA_BUCKET
 						|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.LAVA_BUCKET) {
 					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == Items.LAVA_BUCKET) {
-						entity.hurt(DamageSource.GENERIC, 1);
-						if (entity instanceof Player _player) {
-							ItemStack _stktoremove = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
-							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-									_player.inventoryMenu.getCraftSlots());
+						if (event != null && event.isCancelable()) {
+							event.setCanceled(true);
 						}
+						entity.hurt(DamageSource.GENERIC, 1);
 						if (entity instanceof Player _player && !_player.level.isClientSide())
 							_player.displayClientMessage(new TextComponent("Anti-Grief Enabled. Please refrain from using lava buckets."), (false));
 					} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 							.getItem() == Items.LAVA_BUCKET) {
-						entity.hurt(DamageSource.GENERIC, 1);
-						if (entity instanceof Player _player) {
-							ItemStack _stktoremove = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
-							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-									_player.inventoryMenu.getCraftSlots());
+						if (event != null && event.isCancelable()) {
+							event.setCanceled(true);
 						}
+						entity.hurt(DamageSource.GENERIC, 1);
 						if (entity instanceof Player _player && !_player.level.isClientSide())
 							_player.displayClientMessage(new TextComponent("Anti-Grief Enabled. Please refrain from using lava buckets."), (false));
 					}

@@ -542,12 +542,12 @@
       "path": "~/GameRules"
     },
     {
-      "name": "OnBlockPlaced",
+      "name": "OnPlayerRightClickWithItem",
       "type": "procedure",
       "sortid": 44,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "on_block_placed",
+      "registry_name": "on_player_right_click_with_item",
       "metadata": {
         "dependencies": [
           {
@@ -567,8 +567,8 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "advancements.blue_orchid_logic.descr": "Logic",
       "advancements.orange_tulip_logic.descr": "Logic",
+      "advancements.blue_orchid_logic.descr": "Logic",
       "advancements.dandelion_logic.title": "Dandelion Logic",
       "advancements.red_tulip_logic.descr": "Logic",
       "advancements.allium_logic.descr": "Logic",
