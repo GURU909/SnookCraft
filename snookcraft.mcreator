@@ -561,52 +561,14 @@
         ]
       },
       "path": "~/Procedures"
-    },
-    {
-      "name": "WriteToFile",
-      "type": "procedure",
-      "sortid": 45,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "write_to_file",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
-      "name": "OnPlayerOpenChest",
-      "type": "procedure",
-      "sortid": 45,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "on_player_open_chest",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "blockstate",
-            "type": "blockstate"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "advancements.orange_tulip_logic.descr": "Logic",
       "advancements.blue_orchid_logic.descr": "Logic",
+      "advancements.orange_tulip_logic.descr": "Logic",
       "advancements.dandelion_logic.title": "Dandelion Logic",
       "advancements.red_tulip_logic.descr": "Logic",
       "advancements.allium_logic.descr": "Logic",
@@ -721,8 +683,8 @@
     "author": "DaGooRoo",
     "websiteURL": "https://discord.gg/e7F884P3AE",
     "license": "All Rights Reserved",
-    "disableForgeVersionCheck": false,
-    "serverSideOnly": true,
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
     "modPicture": "snookums_pfp",
     "requiredMods": [],
     "dependencies": [],

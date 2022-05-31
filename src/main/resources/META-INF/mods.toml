@@ -21,12 +21,6 @@ SnookCraft! A custom mod made for use on TheSnookums' MC Server.
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.snookcraft]]
-    modId="forge"
-    mandatory=true
-    versionRange="[40.1.0]"
-    ordering="NONE"
-    side="BOTH"
 
 
 
