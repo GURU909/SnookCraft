@@ -44,5 +44,12 @@ public class OnCommandProcedure {
 			if (world instanceof Level _level)
 				_level.getGameRules().getRule(SnookcraftModGameRules.RESTRICTLAVAUSE).set((false), _level.getServer());
 		}
+		if ((command).equals("gamerule logChestUsage true")) {
+			if (world instanceof Level _level)
+				_level.getGameRules().getRule(SnookcraftModGameRules.LOGCHESTUSAGE).set((true), _level.getServer());
+		} else if ((command).equals("gamerule logChestUsage false")) {
+			if (world instanceof Level _level)
+				_level.getGameRules().getRule(SnookcraftModGameRules.LOGCHESTUSAGE).set((false), _level.getServer());
+		}
 	}
 }

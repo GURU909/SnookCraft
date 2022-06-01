@@ -36,11 +36,11 @@ public class OnPlayerRightClickOnBlockProcedure {
 			return;
 		if (world.getLevelData().getGameRules().getBoolean(SnookcraftModGameRules.LOGCHESTUSAGE)) {
 			if (blockstate.getBlock() == Blocks.CHEST) {
-				SnookcraftMod.LOGGER.info((("Display Name: " + entity.getDisplayName().getString()) + ""
+				SnookcraftMod.LOGGER.info((("** CHEST OPENED ** Display Name: " + entity.getDisplayName().getString()) + ""
 						+ ((" Coordinates: " + (((" X: " + x) + "" + (" Y: " + y)) + "" + (" Z: " + z))) + ""
 								+ (" Timestamp: " + new java.text.SimpleDateFormat("MM-dd hh:mm:ss").format(Calendar.getInstance().getTime())))));
 			} else if (blockstate.getBlock() == Blocks.TRAPPED_CHEST) {
-				SnookcraftMod.LOGGER.info((("Display Name: " + entity.getDisplayName().getString()) + ""
+				SnookcraftMod.LOGGER.info((("** CHEST OPENED ** Display Name: " + entity.getDisplayName().getString()) + ""
 						+ ((" Coordinates: " + (((" X: " + x) + "" + (" Y: " + y)) + "" + (" Z: " + z))) + ""
 								+ (" Timestamp: " + new java.text.SimpleDateFormat("MM-dd hh:mm:ss").format(Calendar.getInstance().getTime())))));
 			}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/tinted_cross",
+  "textures": {
+    "cross": "snookcraft:blocks/marijuanastalk",
+    "particle": "snookcraft:blocks/marijuanastalk"
+  }
+}
