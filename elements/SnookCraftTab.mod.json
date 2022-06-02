@@ -1,0 +1,11 @@
+{
+  "_fv": 28,
+  "_type": "tab",
+  "definition": {
+    "name": "Snook Craft Tab",
+    "icon": {
+      "value": "Items.AXOLOTL_BUCKET"
+    },
+    "showSearch": false
+  }
+}

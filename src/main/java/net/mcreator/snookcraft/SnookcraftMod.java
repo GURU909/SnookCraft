@@ -26,9 +26,9 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.snookcraft.init.SnookcraftModTabs;
 import net.mcreator.snookcraft.init.SnookcraftModItems;
-import net.mcreator.snookcraft.init.SnookcraftModFeatures;
-import net.mcreator.snookcraft.init.SnookcraftModBlocks;
+import net.mcreator.snookcraft.init.SnookcraftModEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -44,12 +44,11 @@ public class SnookcraftMod {
 	private static int messageID = 0;
 
 	public SnookcraftMod() {
-
+		SnookcraftModTabs.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-		SnookcraftModBlocks.REGISTRY.register(bus);
-		SnookcraftModItems.REGISTRY.register(bus);
 
-		SnookcraftModFeatures.REGISTRY.register(bus);
+		SnookcraftModItems.REGISTRY.register(bus);
+		SnookcraftModEntities.REGISTRY.register(bus);
 
 	}
 

@@ -612,43 +612,39 @@
       "path": "~/Procedures"
     },
     {
-      "name": "Marijuana",
-      "type": "plant",
-      "sortid": 47,
+      "name": "SnookCraftTab",
+      "type": "tab",
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "marijuana",
-      "path": "~/Items"
+      "registry_name": "snook_craft_tab",
+      "path": "~/Items/CreativeItemTabs"
     },
     {
-      "name": "CannabisNugget",
-      "type": "item",
-      "sortid": 48,
+      "name": "Duck",
+      "type": "livingentity",
+      "sortid": 56,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "cannabis_nugget",
-      "path": "~/Items"
+      "registry_name": "duck",
+      "path": "~/Creatures"
     },
     {
-      "name": "MarijuanaUpdateTick",
+      "name": "OnPlayerRightClickOnEntity",
       "type": "procedure",
-      "sortid": 49,
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "marijuana_update_tick",
+      "registry_name": "on_player_right_click_on_entity",
       "metadata": {
         "dependencies": [
           {
-            "name": "x",
-            "type": "number"
+            "name": "entity",
+            "type": "entity"
           },
           {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
+            "name": "sourceentity",
+            "type": "entity"
           },
           {
             "name": "world",
@@ -659,51 +655,13 @@
       "path": "~/Procedures"
     },
     {
-      "name": "RollingPapers",
-      "type": "item",
-      "sortid": 50,
+      "name": "SnookumsDuck",
+      "type": "livingentity",
+      "sortid": 58,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "rolling_papers",
-      "path": "~/Items"
-    },
-    {
-      "name": "JointPlayerFinishesUsingItem",
-      "type": "procedure",
-      "sortid": 51,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "joint_player_finishes_using_item",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
-      "name": "Joint",
-      "type": "item",
-      "sortid": 51,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "joint",
-      "path": "~/Items"
+      "registry_name": "snookums_duck",
+      "path": "~/Creatures"
     }
   ],
   "variable_elements": [],
@@ -725,9 +683,12 @@
       "advancements.azure_logic.title": "Azure Logic",
       "gamerule.playersDropHeads": "Players Drop Heads",
       "advancements.orange_tulip_logic.title": "Orange Tulip Logic",
+      "item.snookcraft.snookums_duck_spawn_egg": "Snookums Duck Spawn Egg",
       "advancements.dead_or_alive.descr": "Claim a player\u0027s head, through any means necessary.",
       "advancements.iron_advance.title": "Iron Advance",
       "advancements.iron_advance.descr": "Logic",
+      "itemGroup.tabsnook_craft_tab": "Snook Craft Tab",
+      "entity.snookcraft.duck": "Duck",
       "advancements.cornflower_logic.title": "Cornflower Logic",
       "advancements.lilac_logic.descr": "Logic",
       "advancements.basically_edison.title": "Basically Edison",
@@ -749,7 +710,6 @@
       "advancements.coal_advance.descr": "Progress tracker for Ore Galore",
       "advancements.wither_rose_logic.title": "Wither Rose Logic",
       "advancements.sunflower_logic.descr": "Logic",
-      "block.snookcraft.marijuana": "Marijuana",
       "advancements.lilac_logic.title": "Lilac Logic",
       "advancements.sunflower_logic.title": "Sunflower Logic",
       "gamerule.playersDropHeads.description": "Players now drop heads on death.",
@@ -764,7 +724,7 @@
       "advancements.poppy_logic.title": "Poppy Logic",
       "advancements.copper_advance.descr": "Logic",
       "gamerule.restrictLavaUse.description": "Allow or deny players the ability to place lava.",
-      "item.snookcraft.rolling_papers": "Rolling Papers",
+      "item.snookcraft.duck_spawn_egg": "Duck Spawn Egg",
       "advancements.white_tulip_logic.descr": "Logic",
       "advancements.lapis_advance.title": "Lapis Advance",
       "advancements.basically_edison.descr": "Craft a redstone lamp",
@@ -774,12 +734,11 @@
       "advancements.oxeye_daisy_logic.descr": "Logic",
       "advancements.redstone_advance.descr": "Logic",
       "advancements.useless.descr": "Smelt a copper ingot",
-      "item.snookcraft.cannabis_nugget": "Cannabis Nugget",
+      "entity.snookcraft.snookums_duck": "Snookums Duck",
       "advancements.wither_rose_logic.descr": "Logic",
       "advancements.dead_or_alive.title": "Dead Or Alive",
       "advancements.welcome_to_snookcraft.descr": "Joined a server running SnookCraft. Welcome!",
       "advancements.rose_bush_logic.descr": "Logic",
-      "item.snookcraft.joint": "Joint",
       "advancements.lily_of_the_valley_logic.descr": "Logic",
       "advancements.a_fine_addition.title": "A Fine Addition",
       "advancements.pink_tulip_logic.title": "Pink Tulip Logic",
@@ -808,7 +767,12 @@
       },
       {
         "name": "Items",
-        "children": []
+        "children": [
+          {
+            "name": "CreativeItemTabs",
+            "children": []
+          }
+        ]
       },
       {
         "name": "GameRules",
@@ -820,6 +784,14 @@
       },
       {
         "name": "Commands",
+        "children": []
+      },
+      {
+        "name": "Recipes",
+        "children": []
+      },
+      {
+        "name": "Creatures",
         "children": []
       }
     ]
