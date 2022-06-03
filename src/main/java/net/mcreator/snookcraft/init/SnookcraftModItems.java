@@ -11,6 +11,7 @@ import net.minecraftforge.common.ForgeSpawnEggItem;
 
 import net.minecraft.world.item.Item;
 
+import net.mcreator.snookcraft.item.MapleSyrupItem;
 import net.mcreator.snookcraft.SnookcraftMod;
 
 public class SnookcraftModItems {
@@ -20,4 +21,5 @@ public class SnookcraftModItems {
 	public static final RegistryObject<Item> SNOOKUMS_DUCK = REGISTRY.register("snookums_duck_spawn_egg",
 			() -> new ForgeSpawnEggItem(SnookcraftModEntities.SNOOKUMS_DUCK, -65281, -256,
 					new Item.Properties().tab(SnookcraftModTabs.TAB_SNOOK_CRAFT_TAB)));
+	public static final RegistryObject<Item> MAPLE_SYRUP_BUCKET = REGISTRY.register("maple_syrup_bucket", () -> new MapleSyrupItem());
 }

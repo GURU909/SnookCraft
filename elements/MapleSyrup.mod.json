@@ -1,0 +1,52 @@
+{
+  "_fv": 28,
+  "_type": "fluid",
+  "definition": {
+    "name": "Maple Syrup",
+    "bucketName": "Maple Syrup Bucket",
+    "textureStill": "lava_placeholder",
+    "textureFlowing": "lava_placeholder",
+    "tintType": "No tint",
+    "canMultiply": true,
+    "flowRate": 20,
+    "levelDecrease": 1,
+    "slopeFindDistance": 4,
+    "spawnParticles": true,
+    "dripParticle": {
+      "value": "WATER_DROP"
+    },
+    "flowStrength": -1.0,
+    "luminosity": 0,
+    "density": 1000,
+    "viscosity": 1000,
+    "isGas": false,
+    "temperature": 300,
+    "type": "WATER",
+    "generateBucket": true,
+    "textureBucket": "maplesyrupbucket",
+    "creativeTab": {
+      "value": "CUSTOM:SnookCraftTab"
+    },
+    "emptySound": {
+      "value": "item.bucket.empty_lava"
+    },
+    "rarity": "UNCOMMON",
+    "specialInfo": [],
+    "resistance": 100.0,
+    "luminance": 0,
+    "lightOpacity": 5,
+    "emissiveRendering": false,
+    "tickRate": 10,
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "colorOnMap": "DEFAULT",
+    "frequencyOnChunks": 6,
+    "spawnWorldTypes": [
+      "Surface"
+    ],
+    "restrictionBiomes": [],
+    "onEntityCollides": {
+      "name": "MapleSyrupMobplayerCollidesBlock"
+    }
+  }
+}

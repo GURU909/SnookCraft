@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:bucket"
+    },
+    "title": {
+      "translate": "advancements.lost_in_the_sauce.title"
+    },
+    "description": {
+      "translate": "advancements.lost_in_the_sauce.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "lost_in_the_sauce": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "snookcraft:welcome_to_snookcraft"
+}
